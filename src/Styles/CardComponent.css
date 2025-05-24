@@ -1,0 +1,103 @@
+
+
+.stock{
+    width: 300px;
+    position: relative;
+    max-height: 590px;
+    padding: 0;
+    overflow-y: auto;
+    
+}
+
+.stock .accordion-body{
+    padding: 0;
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after{
+    background-image: none;
+}
+
+.delete-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+}
+
+.card-chevron{
+    position: absolute;
+    right: 10px;
+    z-index: 3;
+    transition: all 0.3s;
+}
+
+.card-chevron-header{
+    bottom: 5px;
+    
+}
+
+.accordion-button:not(.collapsed) .card-chevron{
+    transform: rotate(90deg);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-animate {
+  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* card parts */
+
+input[type='number'] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.part-stack{
+    text-align: center;
+    
+}
+
+
+.part-stack img, .bp-container{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.bp-container{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.bp-container h4{
+    background-color: hsla(231, 98%, 37%, 0.235);
+}
+
+.part-set-group{
+    width: 140px;
+    
+}
+
+.part-plat-input{
+    width:60px;
+   
+}
+

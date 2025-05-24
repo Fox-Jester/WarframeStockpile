@@ -1,0 +1,28 @@
+.search-item{
+ cursor: pointer;
+ 
+}
+.search-item:hover{
+  background-color: #0d6efd;
+  color: white;
+
+}
+
+.search-item.greyed {
+  background-color: lightgray;
+}
+
+
+.search-item.greyed:hover{
+ 
+  background-color: #4e6fa1
+}
+.input-group select.filter-select{
+  width: fit-content;
+  flex-grow: 0;
+
+}
+
+.input-group select.filter-select.less-padding{
+  padding: 8px 12px;
+}

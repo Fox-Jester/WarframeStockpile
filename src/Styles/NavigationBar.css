@@ -1,0 +1,41 @@
+
+
+.highlight{
+    color: royalblue;
+
+}
+
+.brand{
+  font-family: "Maven Pro", sans-serif;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+
+.nav{
+    font-size: 1.2rem;
+}
+
+.nav a{
+    font-weight: 500;
+}
+
+
+.nav a:hover{
+    color: rgb(166, 188, 255);
+
+}
+
+a.nav-link.selected{
+     color: royalblue;
+}
+
+
+@media screen and (max-width: 450px){
+    .brand{
+  font-size: 1.2rem;
+}
+
+.nav{
+    font-size: 1rem;
+}
+}
