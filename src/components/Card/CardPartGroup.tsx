@@ -1,11 +1,11 @@
 
 
-import TypeRef from "../Arrays/TypeRef.tsx"
+import TypeRef from "../../Arrays/SetTypesArray.tsx"
 import CardPart from "./CardPart.tsx"
 import { Accordion} from "react-bootstrap"
 
 
-import type { PartValuesGroup } from "../Types/CardTypes.ts";
+import type { PartValuesGroup } from "../../Types/CardTypes.ts";
 
 
 interface CreateCardPartsProps{

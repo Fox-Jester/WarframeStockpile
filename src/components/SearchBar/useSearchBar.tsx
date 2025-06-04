@@ -16,7 +16,7 @@ export function useSearchBar({ list, placeholderText, onSelect,  }: {
 
   const preview = useMemo(() => {
     return list.filter(item =>
-      item.toLowerCase().includes(value.replace(/\s+/g, '').toLowerCase())
+      item.replace(/\s+/g, '').toLowerCase().includes(value.replace(/\s+/g, '').toLowerCase())
     );
   }, [list, value]);
 

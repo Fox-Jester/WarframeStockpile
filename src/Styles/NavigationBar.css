@@ -1,41 +1,67 @@
 
 
-.highlight{
-    color: royalblue;
-
+.page-navbar{
+    top: 0;
+    position: absolute;
+    padding-bottom: 0;
+    background-color: #242424;
+    width: 100%;
 }
+
+@media screen and (max-width: 992px){
+  .page-navbar{
+      top: 0;
+      position: relative;
+     
+      width: 100%;
+  }
+  
+}
+@media screen and (max-width: 400px){
+
+  .page-navbar{
+    margin-top: 10px;
+  }
+
+  .page-navbar .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+}
+
+
 
 .brand{
   font-family: "Maven Pro", sans-serif;
   line-height: 1;
   font-size: 1.4rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  background: linear-gradient(130deg, hsl(0, 0%, 25%), hsl(0, 0%, 20%));
 }
 
-.nav{
-    font-size: 1.2rem;
+.brand.gold .highlight{
+  color: gold;
 }
 
-.nav a{
-    font-weight: 500;
+.brand.blue .highlight{
+  color: rgb(0, 236, 236);
 }
 
-
-.nav a:hover{
-    color: rgb(166, 188, 255);
-
+.highlight{
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
+    
 }
 
-a.nav-link.selected{
-     color: royalblue;
-}
-
-
-@media screen and (max-width: 450px){
+@media screen and (max-width: 780px){
     .brand{
   font-size: 1.2rem;
 }
 
-.nav{
-    font-size: 1rem;
-}
+
 }

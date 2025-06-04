@@ -1,7 +1,7 @@
 import { Button,  Form,  InputGroup, Stack } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
-import { BlockInvalidKey } from "../BlockInvalidKey";
+import { BlockInvalidKey } from "../../BlockInvalidKey"; 
 
 
 function CardBottom({bottomValues, setBottomValues}: {bottomValues: {plat: number, sets: number}, setBottomValues: Function}){

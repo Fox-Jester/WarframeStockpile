@@ -1,11 +1,12 @@
 import { Accordion, Card, CloseButton} from "react-bootstrap";
 import CreateCardBottom from "./CardBottom";
 import CreateCardParts from "./CardPartGroup";
-import type { CardData, PartValuesGroup } from "../Types/CardTypes";
-import PSReference from "../Arrays/PSReference";
-import  TypeRef from "../Arrays/TypeRef";
+import type { CardData, PartValuesGroup } from "../../Types/CardTypes";
+
+import  TypeRef from "../../Arrays/SetTypesArray";
 import { useEffect, useRef, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css"
+import PrimeSetsArray from "../../Arrays/PrimeSetsArray";
 
 
 
@@ -23,7 +24,7 @@ function CardComponent({card, created=false , save=false, onDelete, stockpile=fa
     const [bottomValues, setBottomValues] = useState({ plat: card.plat, sets: card.sets })
     
     
-    const stockType = card.type === "prime" ? (PSReference[(card.name as keyof typeof PSReference)].type as keyof typeof TypeRef)
+    const stockType = card.type === "prime" ? (PrimeSetsArray[(card.name as keyof typeof PrimeSetsArray)].type as keyof typeof TypeRef)
         : ""
     
         
@@ -116,12 +117,12 @@ function CardComponent({card, created=false , save=false, onDelete, stockpile=fa
           {created ? <CloseButton onClick={deleteCard}/> : null}
           </Card.Header>
           {card.name ? <Card.Img loading="lazy" src={card.img}/>: <></>}  
-        <Card.Body>
+        <Card.Body className="p-0 border-top border-bottom border-2">
 
         {card.type === "prime" ? <CreateCardParts partValues={partValues} setPartValues={setPartValues} stockType={(stockType as keyof typeof TypeRef)}/> : <></>}
 
              </Card.Body>
-        <Card.Footer className="d-flex justify-content-center">
+        <Card.Footer className="d-flex justify-content-center p-0">
         <CreateCardBottom bottomValues={bottomValues} setBottomValues={setBottomValues}/>
         
         </Card.Footer>
@@ -131,7 +132,7 @@ function CardComponent({card, created=false , save=false, onDelete, stockpile=fa
      
       <Accordion>
       <Card className="stock bg-light mb-2 ">
-          <Accordion.Header className="d-flex align-items-center justify-content-center" >
+          <Accordion.Header className="d-flex stock-header align-items-center justify-content-center" >
           <Card.Title className="fs-4" >{card.name}<i className="card-chevron card-chevron-header bi bi-chevron-right"/></Card.Title>
 
           </Accordion.Header>
@@ -139,12 +140,12 @@ function CardComponent({card, created=false , save=false, onDelete, stockpile=fa
           <Accordion.Body>
 
           {card.name ? <Card.Img src={card.img}/>: <></>}  
-        <Card.Body>
+        <Card.Body className="p-0 border-top border-3 border-dark">
 
         {card.type === "prime" ? <CreateCardParts partValues={partValues} setPartValues={setPartValues} stockType={(stockType as keyof typeof TypeRef)}/> : <></>}
 
              </Card.Body>
-        <Card.Footer className="d-flex justify-content-center">
+        <Card.Footer className="d-flex justify-content-center p-0">
         <CreateCardBottom bottomValues={bottomValues} setBottomValues={setBottomValues}/>
         
         </Card.Footer>
@@ -153,6 +154,8 @@ function CardComponent({card, created=false , save=false, onDelete, stockpile=fa
       </Accordion>
       
     )
+
+   
 
     return(
       stockpile ? stockCard : normalCard

@@ -1,0 +1,14 @@
+refactor
+
+
+
+create bar grabing localarray/ just grab from home page 
+
+-refactor imgs
+
+-media query
+
+-learn tests
+
+
+

@@ -2,7 +2,7 @@ import { Button, Container, Form, FormControl, Image, InputGroup, Row, Stack } f
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
 
-import { BlockInvalidKey } from "../BlockInvalidKey"
+import { BlockInvalidKey } from "../../BlockInvalidKey" 
 
 
 interface CardPartProps{

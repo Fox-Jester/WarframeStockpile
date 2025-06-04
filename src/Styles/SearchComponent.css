@@ -2,27 +2,71 @@
  cursor: pointer;
  
 }
-.search-item:hover{
-  background-color: #0d6efd;
-  color: white;
 
+
+.vstack.gold .search-item:hover{
+  background-color: gold;
+  
 }
 
-.search-item.greyed {
-  background-color: lightgray;
+.vstack.blue .search-item:hover{
+  background-color: rgb(0, 236, 236);
+  
+}
+
+.search-item.greyed{
+  background-color: hsl(0, 0%, 90%);
+  color: grey;
+  
 }
 
 
-.search-item.greyed:hover{
- 
-  background-color: #4e6fa1
-}
-.input-group select.filter-select{
-  width: fit-content;
-  flex-grow: 0;
-
+.vstack.blue .form-control:focus{
+  border-color: rgb(0, 236, 236);
+  box-shadow: 0 0 3px rgb(0, 236, 236);;
 }
 
-.input-group select.filter-select.less-padding{
-  padding: 8px 12px;
+.vstack.gold .form-control:focus{
+  border-color: gold;
+  box-shadow: 0 0 3px gold;;
+}
+
+
+.search-btn{
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.vstack.gold .search-btn{
+  color: gold;
+  border-color: gold;
+}
+
+.vstack.gold .search-btn:hover{
+  color: rgb(0, 236, 236);
+  border-color: rgb(0, 236, 236);
+  background-color: transparent;
+}
+
+.vstack.gold .search-btn:active{
+  border-color: black;
+  color: black;
+  background-color: gold;
+}
+
+.vstack.blue .search-btn{
+  color: rgb(0, 236, 236);
+  border-color: rgb(0, 236, 236);
+}
+
+.vstack.blue .search-btn:hover{
+  color: gold;
+  border-color: gold;
+  background-color: transparent;
+}
+
+.vstack.blue .search-btn:active{
+  border-color: black;
+  color: black;
+  background-color: rgb(0, 236, 236);
 }

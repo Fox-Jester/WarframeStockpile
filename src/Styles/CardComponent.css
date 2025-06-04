@@ -1,9 +1,12 @@
 
+.stockpile .stock{
+    max-height: 495px;
+}
 
 .stock{
-    width: 300px;
+    width: 210px;
     position: relative;
-    max-height: 590px;
+    max-height: 455px;
     padding: 0;
     overflow-y: auto;
     
@@ -13,10 +16,15 @@
     padding: 0;
 }
 
+.stock-header .accordion-button{
+    height: 97px;
+}
+
 .accordion-button::after,
 .accordion-button:not(.collapsed)::after{
     background-image: none;
 }
+
 
 .delete-btn{
     position: absolute;

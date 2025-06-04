@@ -1,0 +1,41 @@
+
+
+
+.page-toggle-btn{
+    font-size: 1.4rem;
+    padding: 8px 12px;
+    transform: skew(-21deg);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    color: hsl(0, 0%, 85%);
+    background-color: hsla(0, 0%, 50%, 0.182);
+    border-radius: 3px;
+}
+
+.page-toggle-btn:hover{
+    background-color: hsla(0, 0%, 35%, 0.729);
+}
+
+.page-toggle-btn.selected{
+ color: hsl(0, 0%, 20%);
+}
+
+.search-toggle:hover{
+    box-shadow: 0px 0px 5px cyan;
+}
+
+.search-toggle.selected{
+    background:  rgb(0, 236, 236);
+    text-shadow: 1px 1px 2px hsla(192, 98%, 48%, 0.512);
+}
+
+.create-toggle:hover{
+    box-shadow: 0px 0px 5px yellow;
+}
+
+.create-toggle.selected{
+    background: gold;
+    text-shadow: 1px 1px 3px goldenrod;
+    
+}

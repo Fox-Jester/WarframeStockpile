@@ -1,8 +1,8 @@
 import { Button, Form, InputGroup, ListGroup } from "react-bootstrap";
-import { useSearchBar } from "./useSearchBar.tsx";
-import type { CardData } from "../Types/CardTypes.ts";
-import  SearchFilter from "./Home/SearchFilter.tsx";
-import "../Styles/SearchComponent.css"
+import { useSearchBar } from "./useSearchBar.tsx"; 
+import type { CardData } from "../../Types/CardTypes.ts"; 
+
+import "../../Styles/SearchComponent.css"
 
 
 
@@ -11,11 +11,11 @@ interface SearchComponentProps{
     placeholder: string,
     onSelect: (value: string) => void,
     filter?: string,
-    updateFilter?: Function
+   
 
 }
 
-function SearchComponent({ list, placeholder, onSelect, filter = '', updateFilter }: SearchComponentProps) {
+function SearchComponent({ list, placeholder, onSelect, filter = ''}: SearchComponentProps) {
 
  
   const search = useSearchBar({ list, placeholderText: placeholder, onSelect});
@@ -56,7 +56,6 @@ function SearchComponent({ list, placeholder, onSelect, filter = '', updateFilte
   return (
     <Form onSubmit={e => e.preventDefault()}>
       <InputGroup>
-      {filter ? <SearchFilter updateFilter={updateFilter!} currentFilter={filter}/> : null}
         <Form.Control
           ref={search.inputRef}
           onKeyDown={search.handleKey}
@@ -67,7 +66,7 @@ function SearchComponent({ list, placeholder, onSelect, filter = '', updateFilte
           onChange={search.handleChange}
           value={search.value}
         />
-        <Button onClick={search.handleSearchBtn}>Enter</Button>
+        <Button className="search-btn" onClick={search.handleSearchBtn}>Enter</Button>
       </InputGroup>
       <ListGroup ref={search.listRef}>
         {search.listVisible

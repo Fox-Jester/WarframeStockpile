@@ -1,8 +1,8 @@
 import { ButtonGroup,  Container,  } from "react-bootstrap"
-import type { CardData } from "../../Types/CardTypes"
-import CardComponent from "../CardComponent"
+import type { CardData } from "../Types/CardTypes" 
+import CardComponent from "./Card/CardComponent" 
 import { useState} from "react"
-import SelectorGroup from "../SelectorGroup";
+import SelectorGroup from "./SelectorGroup" 
 
 
 interface StockpileProps{
@@ -19,7 +19,7 @@ function Stockpile({ onDelete, cardArray}: StockpileProps){
 
     
 
-    console.log(filter)
+   
 
     function sortCards(array: CardData[]){
         switch(filter){
@@ -64,6 +64,7 @@ function Stockpile({ onDelete, cardArray}: StockpileProps){
     
     return(
         <>
+        <h2 className="text-white ">Stockpile</h2>
         <ButtonGroup>
             <SelectorGroup selected={filter} setSelected={setFilter} array={["A-Z", "sets", "price"]}/>
         </ButtonGroup>

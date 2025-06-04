@@ -5,14 +5,45 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: #242424;
-
+  
 }
 
+h2{
+  text-align: center;
+}
 
 .page-container{
-    background-color: #242424;
+  background-color: #242424;
 }
 
+
+
+.vstack.gold {
+  border-bottom: 3px solid gold;
+}
+
+.vstack.blue {
+  border-bottom: 3px solid rgb(0, 236, 236)
+}
+
+.btn.save-btn{
+  background-color: transparent;
+  border-color: gold;
+  color: gold;
+}
+
+.btn.save-btn:hover{
+   background-color: transparent;
+  border-color: gold;
+  color: gold;
+  box-shadow: 0 0 5px gold;
+}
+
+.vstack .btn.save-btn:active{
+  background-color: gold;
+  border-color: black;
+  color: black;
+}
 
 div.page-alert{
   position:fixed;
@@ -23,20 +54,24 @@ div.page-alert{
 }
 
 
+
+
 .stockpile{
   display: grid;
   gap: 15px;
+  margin-bottom: 50px;
   justify-content: center;
-    grid-template-columns: repeat(4, 300px);
+    grid-template-columns: repeat(5, 210px);
  
 }
+
 
 @media screen and (max-width: 1280px){
 
   
 .stockpile{
   gap: 10px;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(4, 210px);
  
 }
 
@@ -46,17 +81,27 @@ div.page-alert{
 
   
 .stockpile{
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(3, 210px);
  
 }
 
 }
 
-@media screen and (max-width: 630px){
+@media screen and (max-width: 680px){
 
   
 .stockpile{
-    grid-template-columns: repeat(1, 300px);
+    grid-template-columns: repeat(2, 210px);
+ 
+}
+
+}
+
+@media screen and (max-width: 440px){
+
+  
+.stockpile{
+    grid-template-columns: repeat(1, 210px);
  
 }
 

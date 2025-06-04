@@ -15,7 +15,7 @@ const getImg = (name: string) => {
 
 
 
-const TypeRef = {
+const SetTypesArray = {
     warframe: [
         {perSet: 1, img: "BP"},
         {perSet: 1, img: getImg("Neuroptics")},
@@ -164,4 +164,4 @@ const TypeRef = {
 
 }
 
-export default TypeRef
+export default SetTypesArray

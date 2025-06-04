@@ -1,16 +1,23 @@
 
 
-import PSReference from "../../Arrays/PSReference.tsx";
-import ModReference from "../../Arrays/ModReference.tsx";
-import ArcaneReference from "../../Arrays/AcraneReference.tsx";
+
+
+
 import { useEffect, useRef, useState } from "react";
-import SearchComponent from "../SearchComponent.tsx";
+import SearchComponent from "../SearchBar/SearchComponent.tsx"; 
 import type { CardData } from "../../Types/CardTypes.ts";
+import PrimeSetsArray from "../../Arrays/PrimeSetsArray.tsx";
 
 
+interface CreateBarProps{
+  type: string,
+  nameArrays: {arcanes: string[], mods: string[]},
+  onSelect: (value: string) => void,
 
+}
 
-function CreateBar({type, onSelect}: {type: string, onSelect: (value: string) => void}){
+function CreateBar({nameArrays, type, onSelect}: CreateBarProps){
+
 
 
   const [placeholder,setPlaceholder] = useState("")
@@ -22,18 +29,24 @@ function CreateBar({type, onSelect}: {type: string, onSelect: (value: string) =>
 
   useEffect(() => {
     switch(type){
+      case "all":
+        typeObjectRef.current = Object.keys(PrimeSetsArray).concat(nameArrays.mods, nameArrays.arcanes)
+         setPlaceholder("Search All");
+      
+        break;
+
       case "prime":
-        typeObjectRef.current = Object.keys(PSReference);
+        typeObjectRef.current = Object.keys(PrimeSetsArray);
         setPlaceholder("Search Primes")
         break;
 
       case "mod":
-        typeObjectRef.current = ModReference;
+        typeObjectRef.current = nameArrays.mods;
         setPlaceholder("Search Mods")
         break;
 
       case "arcane":
-        typeObjectRef.current = ArcaneReference;
+        typeObjectRef.current = nameArrays.arcanes;
         setPlaceholder("Search Arcanes")
         break;
     }

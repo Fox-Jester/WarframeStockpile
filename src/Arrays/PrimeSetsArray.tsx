@@ -13,7 +13,7 @@ const getImg = (name: string) => {
 
 
 
-const PSReference = {
+const PrimeSetsArray = {
     AshPrime: {type: "warframe", img: getImg("AshPrime")},
     AtlasPrime: {type: "warframe", img: getImg("AtlasPrime")},
     BansheePrime: {type: "warframe", img: getImg("BansheePrime")},
@@ -171,4 +171,4 @@ const PSReference = {
     OdonataPrime: {type: "archwing", img: getImg("OdonataPrime")},
 };
 
-export default PSReference;
+export default PrimeSetsArray;
